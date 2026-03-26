@@ -1,6 +1,6 @@
-# MailFlow Marketing Site
+# VeloxStack Marketing Site
 
-Static marketing site for MailFlow with the following pages:
+Static marketing site for VeloxStack Mail with the following pages:
 
 - `/` homepage
 - `/pricing`

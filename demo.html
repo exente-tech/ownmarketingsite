@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book a Demo | MailFlow</title>
+    <title>Book a Demo | VeloxStack Mail</title>
     <meta
       name="description"
-      content="Book a demo to see how MailFlow adds tenant inboxes, custom-domain email, and inbound replies to SaaS products."
+      content="Book a demo to see how VeloxStack Mail adds customer inboxes, custom-domain email, and inbound replies to SaaS products."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -16,7 +16,7 @@
         <div class="container nav">
           <a class="brand" href="index.html">
             <span class="brand-mark" aria-hidden="true"></span>
-            <span>MailFlow</span>
+            <span>VeloxStack</span>
           </a>
           <nav class="nav-links" aria-label="Primary">
             <a href="index.html#product">Product</a>
@@ -52,11 +52,11 @@
                 <h3>Prefer email?</h3>
                 <div class="contact-line">
                   <span>General</span>
-                  <strong>contact@exente-tech.com</strong>
+                  <strong>contact@veloxstack.io</strong>
                 </div>
                 <div class="contact-line">
                   <span>Sales</span>
-                  <strong>hello@exente-tech.com</strong>
+                  <strong>contact@veloxstack.io</strong>
                 </div>
                 <div class="contact-line">
                   <span>Response time</span>
@@ -111,7 +111,7 @@
           <div>
             <a class="brand" href="index.html">
               <span class="brand-mark" aria-hidden="true"></span>
-              <span>MailFlow</span>
+              <span>VeloxStack</span>
             </a>
             <p class="footer-note">See tenant inboxes, custom domains, and inbound replies in a live walkthrough.</p>
           </div>
@@ -123,7 +123,7 @@
             </div>
             <div class="footer-links">
               <a href="demo.html">Demo</a>
-              <a href="mailto:contact@exente-tech.com">contact@exente-tech.com</a>
+              <a href="mailto:contact@veloxstack.io">contact@veloxstack.io</a>
               <a href="index.html">About</a>
             </div>
           </div>
@@ -207,7 +207,7 @@
               const message =
                 responseBody && typeof responseBody.message === "string"
                   ? responseBody.message
-                  : "We couldn't send your request right now. Please try again or email hello@exente-tech.com.";
+                  : "We couldn't send your request right now. Please try again or email contact@veloxstack.io.";
               throw new Error(message);
             }
 
@@ -217,7 +217,7 @@
             const message =
               error instanceof Error && error.message
                 ? error.message
-                : "We couldn't send your request right now. Please try again or email hello@exente-tech.com.";
+                : "We couldn't send your request right now. Please try again or email contact@veloxstack.io.";
             setStatus(message, "error");
           } finally {
             if (submitButton) {
