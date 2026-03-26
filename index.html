@@ -36,13 +36,19 @@
           <div class="container hero-grid">
             <div class="hero-copy">
               <span class="eyebrow fade-in">Infrastructure for customer email</span>
-              <h1 class="fade-in delay-1">Add Email Inboxes to Your SaaS in Minutes</h1>
+              <h1 class="fade-in delay-1">Add Fully Managed Customer Inboxes to Your SaaS</h1>
               <p class="fade-in delay-2">
-                Send, receive, and manage customer emails for every tenant from their own domain,
+                The fastest way to add custom-domain sending and inbound replies to your product,
                 without stitching together mailbox providers, forwarding rules, or admin tooling.
               </p>
+              <div class="hero-audience fade-in delay-2">
+                <span class="hero-audience-label">Built for</span>
+                <span class="pill">SaaS platforms</span>
+                <span class="pill">CRMs</span>
+                <span class="pill">Marketplaces</span>
+              </div>
               <div class="hero-actions fade-in delay-2">
-                <a class="button" href="docs.html">Get Started</a>
+                <a class="button" href="docs.html">Start Building in Minutes</a>
                 <a class="button-secondary" href="demo.html">Book Demo</a>
               </div>
               <div class="support-line fade-in delay-3">
@@ -56,24 +62,24 @@
                   <div class="mock-dots" aria-hidden="true">
                     <span></span><span></span><span></span>
                   </div>
-                  <strong>Tenant inboxes</strong>
+                  <strong>Customer inbox</strong>
                   <span class="mock-badge">Live inbound + sending</span>
                 </div>
                 <div class="mock-layout">
                   <div class="mock-sidebar">
-                    <div class="mock-section-label">Tenants</div>
+                    <div class="mock-section-label">Folders</div>
                     <div class="tenant-item active">
-                      <strong>Acme</strong>
-                      <span>support@acme.com</span>
+                      <strong>Inbox</strong>
+                      <span>24 active threads</span>
                       <div class="pill">Healthy domain</div>
                     </div>
                     <div class="tenant-item">
-                      <strong>Northstar</strong>
-                      <span>help@northstar.io</span>
+                      <strong>Needs reply</strong>
+                      <span>7 waiting</span>
                     </div>
                     <div class="tenant-item">
-                      <strong>Luma</strong>
-                      <span>team@luma.app</span>
+                      <strong>Archived</strong>
+                      <span>142 resolved</span>
                     </div>
                   </div>
                   <div class="mock-thread-list">
@@ -81,7 +87,7 @@
                     <div class="thread-item active">
                       <strong>Re: onboarding issue</strong>
                       <span>user@customer.com</span>
-                      <p>Reply from the Acme workspace landed automatically.</p>
+                      <p>Reply landed directly in the in-app inbox.</p>
                       <small>2m ago</small>
                     </div>
                     <div class="thread-item">
@@ -103,21 +109,21 @@
                       <div class="mail-meta">support@acme.com → user@customer.com</div>
                       <strong>Your inbox is ready</strong>
                       <p>
-                        Tenant-specific branding, domain-based sending, and reply capture are all
-                        active for this workspace.
+                        Brand styling, domain-based sending, and reply capture are all active for
+                        this inbox.
                       </p>
                     </div>
                     <div class="message-card">
                       <div class="mail-meta">user@customer.com → support@acme.com</div>
                       <strong>Perfect, we can reply in-app now</strong>
                       <p>
-                        Replies sync back to the tenant inbox automatically, so your support team can
+                        Replies sync back to the shared inbox automatically, so your support team can
                         keep every conversation inside the product.
                       </p>
                     </div>
                     <div class="message-card">
                       <strong>Routing snapshot</strong>
-                      <p>Tenant isolated · DKIM verified · Webhook received · Thread updated</p>
+                      <p>Thread synced · DKIM verified · Webhook received · Reply ready</p>
                     </div>
                   </div>
                 </div>
@@ -142,6 +148,9 @@
                 <span>Full send + receive support</span>
               </div>
             </div>
+            <div class="trust-line">
+              Used for support, onboarding, and customer communication in multi-tenant apps.
+            </div>
           </div>
         </section>
 
@@ -159,28 +168,180 @@
               <article class="feature-card">
                 <div class="feature-icon">A</div>
                 <h3>Inbox for Every Customer</h3>
-                <p>Provision isolated inboxes per tenant with conversation history and thread state.</p>
+                <p>Provision an isolated inbox with thread history for every customer account.</p>
               </article>
               <article class="feature-card">
                 <div class="feature-icon">B</div>
                 <h3>Send from Custom Domains</h3>
-                <p>Let customers send from addresses like `support@theircompany.com` with simple DNS setup.</p>
+                <p>Send from addresses like `support@theircompany.com` with simple DNS setup.</p>
               </article>
               <article class="feature-card">
                 <div class="feature-icon">C</div>
                 <h3>Full Send + Receive Support</h3>
-                <p>Handle outbound messages and inbound replies through one unified API and webhook model.</p>
+                <p>Handle outbound email and inbound replies through one API and webhook model.</p>
               </article>
               <article class="feature-card">
                 <div class="feature-icon">D</div>
                 <h3>Branded Email Templates</h3>
-                <p>Apply tenant branding automatically so every message feels native to the customer.</p>
+                <p>Apply customer branding automatically so every message feels product-native.</p>
               </article>
               <article class="feature-card">
                 <div class="feature-icon">E</div>
                 <h3>Reliable Delivery Built In</h3>
-                <p>Use routing, retry logic, and provider failover without operating delivery infrastructure yourself.</p>
+                <p>Get routing, retries, and provider failover without running delivery infrastructure yourself.</p>
               </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container mailbox-showcase">
+            <div class="section-head mailbox-showcase-head">
+              <span class="eyebrow">Mailbox UI idea</span>
+              <h2>Show Prospects What Their In-App Mailbox Could Feel Like</h2>
+              <p class="section-copy">
+                A shared inbox does not need to look bolted on. This concept shows how a tenant-aware
+                mailbox can blend conversation triage, customer context, and reply controls inside
+                one product-native workspace.
+              </p>
+            </div>
+
+            <div class="mailbox-shell panel">
+              <div class="mailbox-overview">
+                <div>
+                  <span class="mailbox-kicker">Mailbox concept</span>
+                  <h3>Built for support, onboarding, and account conversations</h3>
+                </div>
+                <div class="mailbox-summary">
+                  <div class="mailbox-stat">
+                    <strong>128</strong>
+                    <span>Open threads</span>
+                  </div>
+                  <div class="mailbox-stat">
+                    <strong>4m</strong>
+                    <span>Median reply time</span>
+                  </div>
+                  <div class="mailbox-stat">
+                    <strong>99.2%</strong>
+                    <span>Delivery health</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mailbox-app">
+                <aside class="mailbox-nav">
+                  <div class="mock-section-label">Queues</div>
+                  <div class="mailbox-nav-item active">
+                    <strong>All conversations</strong>
+                    <span>128 threads</span>
+                  </div>
+                  <div class="mailbox-nav-item">
+                    <strong>Needs reply</strong>
+                    <span>26 waiting</span>
+                  </div>
+                  <div class="mailbox-nav-item">
+                    <strong>Assigned to me</strong>
+                    <span>8 active</span>
+                  </div>
+                  <div class="mailbox-nav-item">
+                    <strong>Escalations</strong>
+                    <span>3 priority</span>
+                  </div>
+                </aside>
+
+                <section class="mailbox-list">
+                  <div class="mailbox-toolbar">
+                    <div class="mailbox-search">Search threads, customers, or domains</div>
+                    <div class="pill">Acme workspace</div>
+                  </div>
+                  <div class="mailbox-thread active">
+                    <div class="mailbox-thread-top">
+                      <strong>Launch checklist questions</strong>
+                      <span>2m</span>
+                    </div>
+                    <p>onboarding@northstar.io</p>
+                    <small>Needs product guidance before domain verification goes live.</small>
+                  </div>
+                  <div class="mailbox-thread">
+                    <div class="mailbox-thread-top">
+                      <strong>Invoice routing confirmation</strong>
+                      <span>18m</span>
+                    </div>
+                    <p>finance@acme.com</p>
+                    <small>Billing reply was sent from the tenant mailbox with branding applied.</small>
+                  </div>
+                  <div class="mailbox-thread">
+                    <div class="mailbox-thread-top">
+                      <strong>Inbound alias setup</strong>
+                      <span>41m</span>
+                    </div>
+                    <p>ops@luma.app</p>
+                    <small>Webhook event received and mapped to the shared support queue.</small>
+                  </div>
+                </section>
+
+                <section class="mailbox-conversation">
+                  <div class="mailbox-conversation-head">
+                    <div>
+                      <strong>Launch checklist questions</strong>
+                      <p>Northstar • onboarding@northstar.io</p>
+                    </div>
+                    <div class="mailbox-actions">
+                      <span class="pill">Assigned to Priya</span>
+                      <span class="pill">SLA healthy</span>
+                    </div>
+                  </div>
+
+                  <div class="mailbox-message inbound">
+                    <div class="mailbox-message-meta">Customer • 9:14 AM</div>
+                    <p>
+                      We have DNS ready. Can we verify the sending domain first and then turn on the
+                      shared mailbox for onboarding replies?
+                    </p>
+                  </div>
+
+                  <div class="mailbox-message outbound">
+                    <div class="mailbox-message-meta">Priya from support@northstar.io • 9:18 AM</div>
+                    <p>
+                      Yes. We usually verify the domain first, then enable routing so replies start
+                      landing in the in-app mailbox immediately.
+                    </p>
+                  </div>
+
+                  <div class="mailbox-compose">
+                    <div class="mailbox-compose-head">
+                      <strong>Reply</strong>
+                      <span>Template suggestions • Snippets • Internal note</span>
+                    </div>
+                    <div class="mailbox-compose-body">
+                      Happy to help. Once DNS is green, your team can send from
+                      <code>support@northstar.io</code> and keep every reply inside the workspace.
+                    </div>
+                    <div class="mailbox-compose-footer">
+                      <span class="pill">Branding applied</span>
+                      <span class="pill">Reply-to synced</span>
+                      <a class="button" href="demo.html">See the live walkthrough</a>
+                    </div>
+                  </div>
+                </section>
+
+                <aside class="mailbox-context">
+                  <div class="mock-section-label">Customer context</div>
+                  <div class="context-card">
+                    <strong>Workspace health</strong>
+                    <p>Domain verified, webhook active, inbox synced, templates published.</p>
+                  </div>
+                  <div class="context-card">
+                    <strong>Participants</strong>
+                    <p>Priya Shah • Owner</p>
+                    <p>Alex Kim • Billing admin</p>
+                  </div>
+                  <div class="context-card">
+                    <strong>Automation</strong>
+                    <p>Route onboarding threads to Customer Success and flag billing keywords.</p>
+                  </div>
+                </aside>
+              </div>
             </div>
           </div>
         </section>
@@ -218,19 +379,19 @@
                   <div class="mock-dots" aria-hidden="true">
                     <span></span><span></span><span></span>
                   </div>
-                  <strong>Acme customer workspace</strong>
+                  <strong>Support mailbox</strong>
                   <span class="mock-badge">Domain verified</span>
                 </div>
                 <div class="mock-layout">
                   <div class="mock-sidebar">
-                    <div class="mock-section-label">Workspaces</div>
+                    <div class="mock-section-label">Views</div>
                     <div class="tenant-item active">
-                      <strong>Acme</strong>
+                      <strong>All mail</strong>
                       <span>support@acme.com</span>
                     </div>
                     <div class="tenant-item">
-                      <strong>Bluebird</strong>
-                      <span>hello@bluebird.ai</span>
+                      <strong>Assigned</strong>
+                      <span>8 open threads</span>
                     </div>
                   </div>
                   <div class="mock-thread-list">
