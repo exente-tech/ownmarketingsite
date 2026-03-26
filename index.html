@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MailFlow | Email Inboxes for Multi-Tenant SaaS</title>
+    <meta
+      name="description"
+      content="Add branded customer inboxes, custom-domain sending, and inbound replies to your SaaS with one developer-friendly API."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container nav">
+          <a class="brand" href="index.html">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span>MailFlow</span>
+          </a>
+          <nav class="nav-links" aria-label="Primary">
+            <a href="#product">Product</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="docs.html">Docs</a>
+            <a href="demo.html">Book Demo</a>
+          </nav>
+          <div class="nav-actions">
+            <a class="button-secondary" href="demo.html">Book Demo</a>
+            <a class="button" href="docs.html">Get Started</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="container hero-grid">
+            <div class="hero-copy">
+              <span class="eyebrow fade-in">Infrastructure for customer email</span>
+              <h1 class="fade-in delay-1">Add Email Inboxes to Your SaaS in Minutes</h1>
+              <p class="fade-in delay-2">
+                Send, receive, and manage customer emails for every tenant from their own domain,
+                without stitching together mailbox providers, forwarding rules, or admin tooling.
+              </p>
+              <div class="hero-actions fade-in delay-2">
+                <a class="button" href="docs.html">Get Started</a>
+                <a class="button-secondary" href="demo.html">Book Demo</a>
+              </div>
+              <div class="support-line fade-in delay-3">
+                No Google Workspace. No complex setup. Just a simple API.
+              </div>
+            </div>
+
+            <div class="hero-visual panel fade-in delay-2">
+              <div class="mock-window">
+                <div class="mock-topbar">
+                  <div class="mock-dots" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <strong>Tenant inboxes</strong>
+                  <span class="mock-badge">Live inbound + sending</span>
+                </div>
+                <div class="mock-layout">
+                  <div class="mock-sidebar">
+                    <div class="mock-section-label">Tenants</div>
+                    <div class="tenant-item active">
+                      <strong>Acme</strong>
+                      <span>support@acme.com</span>
+                      <div class="pill">Healthy domain</div>
+                    </div>
+                    <div class="tenant-item">
+                      <strong>Northstar</strong>
+                      <span>help@northstar.io</span>
+                    </div>
+                    <div class="tenant-item">
+                      <strong>Luma</strong>
+                      <span>team@luma.app</span>
+                    </div>
+                  </div>
+                  <div class="mock-thread-list">
+                    <div class="mock-section-label">Inbox</div>
+                    <div class="thread-item active">
+                      <strong>Re: onboarding issue</strong>
+                      <span>user@customer.com</span>
+                      <p>Reply from the Acme workspace landed automatically.</p>
+                      <small>2m ago</small>
+                    </div>
+                    <div class="thread-item">
+                      <strong>Renewal follow-up</strong>
+                      <span>finance@prospect.io</span>
+                      <p>Sent from support@acme.com using template `renewal`.</p>
+                      <small>18m ago</small>
+                    </div>
+                    <div class="thread-item">
+                      <strong>Trial questions</strong>
+                      <span>ops@northstar.io</span>
+                      <p>Inbound routed through webhook pipeline.</p>
+                      <small>1h ago</small>
+                    </div>
+                  </div>
+                  <div class="mock-thread-view">
+                    <div class="mock-section-label">Conversation</div>
+                    <div class="message-card highlight">
+                      <div class="mail-meta">support@acme.com → user@customer.com</div>
+                      <strong>Your inbox is ready</strong>
+                      <p>
+                        Tenant-specific branding, domain-based sending, and reply capture are all
+                        active for this workspace.
+                      </p>
+                    </div>
+                    <div class="message-card">
+                      <div class="mail-meta">user@customer.com → support@acme.com</div>
+                      <strong>Perfect, we can reply in-app now</strong>
+                      <p>
+                        Replies sync back to the tenant inbox automatically, so your support team can
+                        keep every conversation inside the product.
+                      </p>
+                    </div>
+                    <div class="message-card">
+                      <strong>Routing snapshot</strong>
+                      <p>Tenant isolated · DKIM verified · Webhook received · Thread updated</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="value-strip">
+          <div class="container">
+            <div class="value-grid">
+              <div class="value-item">
+                <span class="value-icon">01</span>
+                <span>Inbox per tenant</span>
+              </div>
+              <div class="value-item">
+                <span class="value-icon">02</span>
+                <span>Custom domain email</span>
+              </div>
+              <div class="value-item">
+                <span class="value-icon">03</span>
+                <span>Full send + receive support</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="product">
+          <div class="container">
+            <div class="section-head">
+              <span class="eyebrow">Feature set</span>
+              <h2>Everything You Need to Add Email to Your SaaS</h2>
+              <p class="section-copy">
+                No email servers. No Google Workspace. No messy integrations. Just the pieces you
+                need to ship a real inbox experience inside your product.
+              </p>
+            </div>
+            <div class="feature-grid">
+              <article class="feature-card">
+                <div class="feature-icon">A</div>
+                <h3>Inbox for Every Customer</h3>
+                <p>Provision isolated inboxes per tenant with conversation history and thread state.</p>
+              </article>
+              <article class="feature-card">
+                <div class="feature-icon">B</div>
+                <h3>Send from Custom Domains</h3>
+                <p>Let customers send from addresses like `support@theircompany.com` with simple DNS setup.</p>
+              </article>
+              <article class="feature-card">
+                <div class="feature-icon">C</div>
+                <h3>Full Send + Receive Support</h3>
+                <p>Handle outbound messages and inbound replies through one unified API and webhook model.</p>
+              </article>
+              <article class="feature-card">
+                <div class="feature-icon">D</div>
+                <h3>Branded Email Templates</h3>
+                <p>Apply tenant branding automatically so every message feels native to the customer.</p>
+              </article>
+              <article class="feature-card">
+                <div class="feature-icon">E</div>
+                <h3>Reliable Delivery Built In</h3>
+                <p>Use routing, retry logic, and provider failover without operating delivery infrastructure yourself.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container spotlight panel">
+            <div class="spotlight-copy">
+              <span class="eyebrow">Product spotlight</span>
+              <h2>Email That Lives Inside Your Product</h2>
+              <p>
+                Give your users a fully integrated email experience with inboxes, replies, and
+                branded sending that stay inside the workflows they already use every day.
+              </p>
+              <div class="callout-list">
+                <div class="callout">
+                  <div class="callout-mark">1</div>
+                  <strong>Tenant isolation</strong>
+                  <p>Each inbox maps cleanly to one tenant, keeping activity and permissions separated.</p>
+                </div>
+                <div class="callout">
+                  <div class="callout-mark">2</div>
+                  <strong>Inbound replies</strong>
+                  <p>Replies flow back into the same thread automatically, ready for your app UI.</p>
+                </div>
+                <div class="callout">
+                  <div class="callout-mark">3</div>
+                  <strong>Domain-based sending</strong>
+                  <p>Customers send from their own domain while you manage the infrastructure underneath.</p>
+                </div>
+              </div>
+            </div>
+            <div class="spotlight-visual">
+              <div class="mock-window panel">
+                <div class="mock-topbar">
+                  <div class="mock-dots" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <strong>Acme customer workspace</strong>
+                  <span class="mock-badge">Domain verified</span>
+                </div>
+                <div class="mock-layout">
+                  <div class="mock-sidebar">
+                    <div class="mock-section-label">Workspaces</div>
+                    <div class="tenant-item active">
+                      <strong>Acme</strong>
+                      <span>support@acme.com</span>
+                    </div>
+                    <div class="tenant-item">
+                      <strong>Bluebird</strong>
+                      <span>hello@bluebird.ai</span>
+                    </div>
+                  </div>
+                  <div class="mock-thread-list">
+                    <div class="mock-section-label">Recent threads</div>
+                    <div class="thread-item active">
+                      <strong>Shipping question</strong>
+                      <span>retail@customer.co</span>
+                      <p>Inbound reply matched to existing conversation.</p>
+                    </div>
+                    <div class="thread-item">
+                      <strong>Support handoff</strong>
+                      <span>agent@acme.com</span>
+                      <p>Thread shared with internal operator dashboard.</p>
+                    </div>
+                  </div>
+                  <div class="mock-thread-view">
+                    <div class="message-card">
+                      <strong>Domain health</strong>
+                      <p>SPF, DKIM, and bounce routing all green for `acme.com`.</p>
+                    </div>
+                    <div class="message-card highlight">
+                      <strong>Webhook event</strong>
+                      <p>`message.received` delivered to `/webhooks/inbound` and synced to tenant inbox.</p>
+                    </div>
+                    <div class="message-card">
+                      <strong>Template payload</strong>
+                      <p>Brand assets, reply-to address, and tenant signature inserted automatically.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="section-head">
+              <span class="eyebrow">Setup flow</span>
+              <h2>How It Works</h2>
+              <p class="section-copy">Go from zero to fully working email in minutes.</p>
+            </div>
+            <div class="steps">
+              <article class="step">
+                <div class="step-number">1</div>
+                <h3>Create a tenant</h3>
+                <p>Provision an isolated inbox and mailbox identity for each customer workspace.</p>
+              </article>
+              <article class="step">
+                <div class="step-number">2</div>
+                <h3>Connect a domain</h3>
+                <p>Guide customers through DNS setup once and store a verified sending identity.</p>
+              </article>
+              <article class="step">
+                <div class="step-number">3</div>
+                <h3>Send emails via API</h3>
+                <p>Trigger transactional or conversational messages from one clean endpoint.</p>
+              </article>
+              <article class="step">
+                <div class="step-number">4</div>
+                <h3>Receive replies automatically</h3>
+                <p>Capture inbound events and sync them into your tenant inbox UI in real time.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="section-head">
+              <span class="eyebrow">Use cases</span>
+              <h2>Built for Modern SaaS Applications</h2>
+            </div>
+            <div class="use-case-grid">
+              <article class="use-case">
+                <h3>SaaS Platforms</h3>
+                <p>Customer-specific communication layered directly into multi-tenant products.</p>
+              </article>
+              <article class="use-case">
+                <h3>CRMs</h3>
+                <p>Keep conversation history close to contacts, activity logs, and internal workflows.</p>
+              </article>
+              <article class="use-case">
+                <h3>Marketplaces</h3>
+                <p>Enable buyer and seller messaging without pushing users into external inboxes.</p>
+              </article>
+              <article class="use-case">
+                <h3>Support Tools</h3>
+                <p>Build shared inboxes and reply handling into the product your teams already use.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="code-section">
+          <div class="container">
+            <div class="code-wrap">
+              <div>
+                <span class="eyebrow">API-first</span>
+                <h2>Developer-Friendly by Default</h2>
+                <p>
+                  Send email, receive replies, and manage inboxes through one clean API that fits
+                  naturally into modern backend systems.
+                </p>
+                <div class="callout-list">
+                  <div class="callout">
+                    <strong>One object model</strong>
+                    <p>Tenants, domains, messages, and webhooks all follow the same predictable schema.</p>
+                  </div>
+                  <div class="callout">
+                    <strong>Built for backends</strong>
+                    <p>Use straightforward JSON requests and webhook events instead of mailbox plumbing.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="code-panel">
+                <div class="code-header">
+                  <div class="mock-dots" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <span>POST /v1/send</span>
+                </div>
+                <pre><code>{
+  "tenant_id": "acme",
+  "from": "support@acme.com",
+  "to": "user@customer.com",
+  "template": "reply",
+  "variables": {
+    "agent_name": "Maya",
+    "thread_id": "thr_20481"
+  }
+}</code></pre>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="section-head">
+              <span class="eyebrow">Pricing preview</span>
+              <h2>Simple, Scalable Pricing</h2>
+            </div>
+            <div class="pricing-preview-grid">
+              <article class="pricing-card">
+                <h3>Free</h3>
+                <span class="plan-price">$0</span>
+                <p>For prototypes and early integrations.</p>
+                <ul class="check-list">
+                  <li>3 tenants</li>
+                  <li>1,000 emails/month</li>
+                  <li>Basic inbox support</li>
+                </ul>
+              </article>
+              <article class="pricing-card highlight">
+                <h3>Growth</h3>
+                <span class="plan-price">$49</span>
+                <p>For teams shipping customer-facing inboxes.</p>
+                <ul class="check-list">
+                  <li>25 tenants</li>
+                  <li>25,000 emails/month</li>
+                  <li>Custom domains and inbound email</li>
+                </ul>
+              </article>
+              <article class="pricing-card">
+                <h3>Scale</h3>
+                <span class="plan-price">$199</span>
+                <p>For production workloads and higher throughput.</p>
+                <ul class="check-list">
+                  <li>100 tenants</li>
+                  <li>100,000 emails/month</li>
+                  <li>Analytics and failover</li>
+                </ul>
+              </article>
+            </div>
+            <div style="margin-top: 22px;">
+              <a class="button-ghost" href="pricing.html">View Pricing</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="cta-panel panel">
+              <span class="eyebrow">Start now</span>
+              <h2>Start building with email + inboxes today</h2>
+              <p>Built for developers shipping multi-tenant applications that need real customer communication.</p>
+              <div class="hero-actions" style="justify-content: center;">
+                <a class="button" href="docs.html">Get Started</a>
+                <a class="button-secondary" href="demo.html">Book Demo</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-wrap">
+          <div>
+            <a class="brand" href="index.html">
+              <span class="brand-mark" aria-hidden="true"></span>
+              <span>MailFlow</span>
+            </a>
+            <p class="footer-note">Infrastructure for tenant inboxes, custom domains, and inbound email.</p>
+          </div>
+          <div class="footer-columns">
+            <div class="footer-links">
+              <a href="index.html#product">Product</a>
+              <a href="pricing.html">Pricing</a>
+              <a href="docs.html">Docs</a>
+            </div>
+            <div class="footer-links">
+              <a href="demo.html">Demo</a>
+              <a href="mailto:contact@mailflow.dev">contact@mailflow.dev</a>
+              <a href="index.html">About</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

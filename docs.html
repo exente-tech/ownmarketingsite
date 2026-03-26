@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Docs | MailFlow</title>
+    <meta
+      name="description"
+      content="Developer-first docs for sending email, receiving replies, connecting domains, and handling webhooks in MailFlow."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container nav">
+          <a class="brand" href="index.html">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span>MailFlow</span>
+          </a>
+          <nav class="nav-links" aria-label="Primary">
+            <a href="index.html#product">Product</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="docs.html">Docs</a>
+            <a href="demo.html">Book Demo</a>
+          </nav>
+          <div class="nav-actions">
+            <a class="button-secondary" href="demo.html">Book Demo</a>
+            <a class="button" href="docs.html">Get Started</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <div class="container page-hero-copy">
+            <span class="eyebrow">Documentation</span>
+            <h1>Modern docs for teams building email into their product</h1>
+            <p>
+              Start with one endpoint, then layer in domains, inbound replies, and webhook-driven
+              thread updates as your integration matures.
+            </p>
+          </div>
+        </section>
+
+        <section class="section" style="padding-top: 0;">
+          <div class="container docs-grid">
+            <aside class="sidebar panel">
+              <small>Sections</small>
+              <nav aria-label="Documentation navigation">
+                <a class="active" href="#overview">Overview</a>
+                <a href="#quickstart">Quickstart</a>
+                <a href="#authentication">Authentication</a>
+                <a href="#sending">Sending Email</a>
+                <a href="#receiving">Receiving Replies</a>
+                <a href="#domains">Domains</a>
+                <a href="#webhooks">Webhooks</a>
+              </nav>
+            </aside>
+
+            <div class="docs-content">
+              <article class="docs-card" id="overview">
+                <div class="docs-icon">01</div>
+                <h2>Overview</h2>
+                <p>
+                  MailFlow gives every tenant in your SaaS an inbox identity, custom-domain support,
+                  outbound delivery, and inbound reply routing through one API model.
+                </p>
+              </article>
+
+              <article class="docs-card" id="quickstart">
+                <div class="docs-icon">02</div>
+                <h2>Quickstart</h2>
+                <p>Create a tenant, connect a domain, and send your first message in a few steps.</p>
+                <div class="mini-plan-grid">
+                  <div class="mini-plan">
+                    <h3>1. Create tenant</h3>
+                    <p>Provision a workspace-scoped inbox container for one customer.</p>
+                  </div>
+                  <div class="mini-plan">
+                    <h3>2. Verify domain</h3>
+                    <p>Add DNS records for the sender domain your customer wants to use.</p>
+                  </div>
+                  <div class="mini-plan">
+                    <h3>3. Send message</h3>
+                    <p>Post JSON to `/v1/send` and watch delivery plus replies flow back.</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="docs-card docs-snippet" id="authentication">
+                <div class="code-header">
+                  <div class="mock-dots" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <span>Authentication</span>
+                </div>
+                <pre><code>Authorization: Bearer mf_test_9f2d...
+Content-Type: application/json</code></pre>
+              </article>
+
+              <article class="docs-card" id="sending">
+                <div class="docs-icon">03</div>
+                <h2>Sending Email</h2>
+                <p>Send branded tenant email through one request.</p>
+                <div class="docs-snippet">
+                  <div class="code-header">
+                    <div class="mock-dots" aria-hidden="true">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <span>POST /v1/send</span>
+                  </div>
+                  <pre><code>{
+  "tenant_id": "acme",
+  "from": "support@acme.com",
+  "to": "user@customer.com",
+  "subject": "Your inbox is live",
+  "template": "launch_notice"
+}</code></pre>
+                </div>
+              </article>
+
+              <article class="docs-card" id="receiving">
+                <div class="docs-icon">04</div>
+                <h2>Receiving Replies</h2>
+                <p>
+                  Incoming messages are normalized into reply events so your app can update tenant
+                  threads, agent views, or CRM records without parsing raw mailbox data.
+                </p>
+              </article>
+
+              <article class="docs-card" id="domains">
+                <div class="docs-icon">05</div>
+                <h2>Domains</h2>
+                <p>
+                  Store verified domains per tenant and expose DNS instructions in your onboarding
+                  flow. Each sending identity remains scoped to the customer who owns it.
+                </p>
+              </article>
+
+              <article class="docs-card" id="webhooks">
+                <div class="docs-icon">06</div>
+                <h2>Webhooks</h2>
+                <p>MailFlow emits delivery, bounce, and inbound-reply events for your backend.</p>
+                <div class="docs-snippet">
+                  <div class="code-header">
+                    <div class="mock-dots" aria-hidden="true">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <span>message.received</span>
+                  </div>
+                  <pre><code>{
+  "type": "message.received",
+  "tenant_id": "acme",
+  "thread_id": "thr_20481",
+  "from": "user@customer.com",
+  "to": "support@acme.com"
+}</code></pre>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-wrap">
+          <div>
+            <a class="brand" href="index.html">
+              <span class="brand-mark" aria-hidden="true"></span>
+              <span>MailFlow</span>
+            </a>
+            <p class="footer-note">Developer-first docs for sending, receiving, domains, and webhooks.</p>
+          </div>
+          <div class="footer-columns">
+            <div class="footer-links">
+              <a href="index.html#product">Product</a>
+              <a href="pricing.html">Pricing</a>
+              <a href="docs.html">Docs</a>
+            </div>
+            <div class="footer-links">
+              <a href="demo.html">Demo</a>
+              <a href="mailto:contact@mailflow.dev">contact@mailflow.dev</a>
+              <a href="index.html">About</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
